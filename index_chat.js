@@ -14,6 +14,13 @@ class Chat {
     messageHistoryBlock.appendChild(messageBlock);
   }
 
+  getInputMessage() {
+    let inputElement = document.getElementById('msg');
+    let inputValue = inputElement.value;
+    inputElement.value = '';
+    return inputValue;
+  }
+
   createMessageBlock(params) {
     let messageBlock = document.createElement('div');
     messageBlock.classList.add('message');
